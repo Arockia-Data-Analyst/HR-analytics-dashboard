@@ -100,7 +100,10 @@ st.success("📈 Most employees are between 30 and 40 years old.")
 st.markdown("---")
 st.header("Employee Dataset")
 
-df = pd.read_csv("HR Analytics Dataset.csv")
+from pathlib import Path
+
+csv_path = Path(__file__).parent / "HR Analytics Dataset.csv"
+df = pd.read_csv(csv_path)
 
 st.dataframe(df)
 st.download_button(
