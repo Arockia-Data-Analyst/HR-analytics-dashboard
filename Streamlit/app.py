@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+import pandas as pd
 
 # Page Configuration
 st.set_page_config(
@@ -10,12 +11,22 @@ st.set_page_config(
 
 st.sidebar.title("HR Analytics")
 
+st.sidebar.title("📊 HR Analytics")
+
 st.sidebar.info("""
 This project analyzes employee attrition using Microsoft Power BI.
 
-Created by:
+Developed by:
 Arockia Jebarani M
 """)
+
+st.sidebar.markdown("---")
+
+st.sidebar.markdown("### 🔗 GitHub Repository")
+
+st.sidebar.markdown(
+    "[View Project on GitHub](https://github.com/Arockia-Data-Analyst/HR-analytics-dashboard)"
+)
 
 # Title
 st.title("📊 HR Analytics Dashboard")
@@ -40,6 +51,17 @@ The dashboard helps HR professionals identify:
 
 st.markdown("---")
 
+st.header("🎯 Project Objectives")
+
+st.markdown("""
+- Analyze employee attrition
+- Identify departments with high turnover
+- Compare salary across job roles
+- Study employee age distribution
+- Support HR decision-making
+""")
+st.markdown("---")
+
 # Dashboard Image
 st.header("Dashboard")
 
@@ -61,15 +83,16 @@ col4.metric("Average Employee Age", "36.92")
 st.markdown("---")
 
 # Insights
-st.header("Key Insights")
+st.header("📌 Key Insights")
 
-st.success("Research & Development department has the highest employee attrition.")
+st.success("✅ Research & Development has the highest employee attrition (133 employees).")
 
-st.info("Most employees belong to the 30–40 years age group.")
+st.info("👥 Around 63% of attrition is from male employees.")
 
-st.warning("Managers and Research Directors receive the highest salaries.")
+st.warning("💰 Managers and Research Directors earn the highest average salaries.")
 
-import pandas as pd
+st.success("📈 Most employees are between 30 and 40 years old.")
+
 
 st.markdown("---")
 st.header("Employee Dataset")
