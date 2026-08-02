@@ -65,7 +65,10 @@ st.markdown("---")
 # Dashboard Image
 st.header("Dashboard")
 
-image = Image.open("Dashboard.png")
+from pathlib import Path
+
+image_path = Path(__file__).parent / "Dashboard.png"
+image = Image.open(image_path)
 st.image(image, use_container_width=True)
 
 st.markdown("---")
