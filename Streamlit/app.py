@@ -65,7 +65,7 @@ st.markdown("---")
 # Dashboard Image
 st.header("Dashboard")
 
-image = Image.open("dashboard.png")
+image = Image.open("Dashboard.png")
 st.image(image, use_container_width=True)
 
 st.markdown("---")
