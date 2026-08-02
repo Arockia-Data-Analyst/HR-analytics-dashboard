@@ -106,9 +106,12 @@ csv_path = Path(__file__).parent / "HR Analytics Dataset.csv"
 df = pd.read_csv(csv_path)
 
 st.dataframe(df)
-st.download_button(
-    label="📥 Download HR Dataset",
-    data=open("HR Analytics Dataset.csv", "rb"),
-    file_name="HR_Analytics_Dataset.csv",
-    mime="text/csv"
-)
+csv_path = Path(__file__).parent / "HR Analytics Dataset.csv"
+
+with open(csv_path, "rb") as file:
+    st.download_button(
+        label="📥 Download HR Dataset",
+        data=file,
+        file_name="HR_Analytics_Dataset.csv",
+        mime="text/csv"
+    )
